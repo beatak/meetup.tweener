@@ -15,6 +15,9 @@ Created on:
 Author:
   Takashi Mizohata <takashi@meetup.com>
 
+License:
+  MIT License -- See LICENSE file
+
 Require:
   - Style manupilation Library in order to modify Style on DOM Object:
     MochiKit.Style - supported
@@ -60,7 +63,7 @@ Meetup.Tweener.isUsing                  = 'MochiKit';
 Meetup.Tweener.styleLib                 = null;
 Meetup.Tweener.tweens                   = {};
 Meetup.Tweener.FPS                      = 55;
-Meetup.Tweener.VERSION                  = '0.5.0';
+Meetup.Tweener.VERSION                  = '0.5.1';
 
 /*
 variable: DEFAULT_PARAMS
@@ -134,7 +137,7 @@ Meetup.Tweener.addTween = function (target, params, notNow) {
 /*
 method: getTweens
 
-Returns the name of the properties of a given object that has a 
+Returns the name of the properties of a given object that has a
 tweening acting on them. Delayed and paused tweenings are also listed.
 
 argument:
@@ -183,7 +186,7 @@ Meetup.Tweener.isTweening = function (target) {
 method: pauseAllTweens
 
 Pauses all tweenings for all objects currently taking place, including
-tweenings currently delayed. And returns true if any property tweening 
+tweenings currently delayed. And returns true if any property tweening
 was successfully paused, false if otherwise.
 
 return:
@@ -202,8 +205,8 @@ Meetup.Tweener.pauseAllTweens = function () {
 /*
 method: pauseTweens
 
-Pauses tweening of a given object. And returns true if any property 
-tweening was successfully paused, false if otherwise.  Not like AS3 
+Pauses tweening of a given object. And returns true if any property
+tweening was successfully paused, false if otherwise.  Not like AS3
 Tweener, this doesn't not accept more than one argument.
 
 argument:
@@ -225,7 +228,7 @@ Meetup.Tweener.pauseTweens = function (target) {
 method: removeAllTweens
 
 Removes all tweenings, so they are not executed anymore, nor are their
-events called. All currently existing tweenings are removed, 
+events called. All currently existing tweenings are removed,
 including tweenings currently delayed or paused.
 
 return:
@@ -245,10 +248,10 @@ Meetup.Tweener.removeAllTweens = function () {
 /*
 method: removeTweens
 
-Removes specific tween of a given object, so they are not executed 
-anymore, nor are their events called.  And returns true if any 
-property tweening was successfully removed, false if otherwise.  
-Note: removeTweens() does not take more than one argument, not 
+Removes specific tween of a given object, so they are not executed
+anymore, nor are their events called.  And returns true if any
+property tweening was successfully removed, false if otherwise.
+Note: removeTweens() does not take more than one argument, not
 like AS3 Tweener.
 
 arguemnt:
@@ -270,8 +273,8 @@ Meetup.Tweener.removeTweens = function (target) {
 /*
 method: resumeAllTweens
 
-Resumes all tweenings that have been paused with 
-<Meetup.Tweener.pauseTweens>.  And returns true if any property 
+Resumes all tweenings that have been paused with
+<Meetup.Tweener.pauseTweens>.  And returns true if any property
 tweening was successfully resumed, false if otherwise.
 
 return:
@@ -290,8 +293,8 @@ Meetup.Tweener.resumeAllTweens = function () {
 /*
 method: resumeTweens
 
-Resumes specific tweenings of specific objects that have been paused 
-with <Meetup.Tweener.pauseTweens>.  Returns true if any property 
+Resumes specific tweenings of specific objects that have been paused
+with <Meetup.Tweener.pauseTweens>.  Returns true if any property
 tweening was successfully resumed, false if otherwise.
 
 argument:
@@ -344,10 +347,10 @@ Meetup.Tweener.compileColor = function (arr) {
 /*
 method: configureStyleLib
 
-[INTERNAL] Sets up CSS manipulation lib for Meetup.Tweener.  In order 
-to be supported by Meetup.Tweener, the style lib needs to have 1) a 
-method that returns computed style for a given DOM element and its 
-property and 2) a method that set a css style value to given DOM 
+[INTERNAL] Sets up CSS manipulation lib for Meetup.Tweener.  In order
+to be supported by Meetup.Tweener, the style lib needs to have 1) a
+method that returns computed style for a given DOM element and its
+property and 2) a method that set a css style value to given DOM
 element.
 
 argument:
@@ -601,7 +604,7 @@ Meetup.Tweener.parseColorRGB = function (val) {
 /*
 method: parseColorSharp
 
-[INTERNAL] Parses a color string represented as "#RGB" or "#RRGGBB" 
+[INTERNAL] Parses a color string represented as "#RGB" or "#RRGGBB"
 and converts into an array.
 
 argument:
@@ -694,7 +697,7 @@ Meetup.Tweener.parseValue = function (val) {
 /*
 method: removeTweenById
 
-[INTERNAL] Stops tweening for a Meetup.Tweener.Tween instance by a 
+[INTERNAL] Stops tweening for a Meetup.Tweener.Tween instance by a
 given tween id, and delete from Meetup.Tweener's internal list.
 
 argument:
@@ -714,7 +717,7 @@ Meetup.Tweener.removeTweenById = function (id) {
 /*
 method: smoothValue
 
-[INTERNAL] Sees and returns what a given object has on a given 
+[INTERNAL] Sees and returns what a given object has on a given
 property and if that is not number, sets an appropriate number to it.
 
 argument:
