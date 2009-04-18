@@ -53,7 +53,11 @@ Todo:
     to do beta-transform automatically?
 */
 
-if (typeof Meetup.Tweener === 'undefined') {
+if (typeof Meetup === 'undefined') {
+  Meetup = {};
+}
+
+if (Meetup.Tweener === undefined) {
   Meetup.Tweener = {};
 }
 
@@ -63,7 +67,7 @@ Meetup.Tweener.isUsing                  = 'MochiKit';
 Meetup.Tweener.styleLib                 = null;
 Meetup.Tweener.tweens                   = {};
 Meetup.Tweener.FPS                      = 55;
-Meetup.Tweener.VERSION                  = '0.5.1';
+Meetup.Tweener.VERSION                  = '0.5.2';
 
 /*
 variable: DEFAULT_PARAMS
