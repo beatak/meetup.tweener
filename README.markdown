@@ -5,6 +5,10 @@ Meetup.Tweener is a simple JavaScript Tweening library.
 
 ## Versions 
 
+### 0.5.2 2009-04-18
+
+* Added root namespace (Meetup) object conditional at the beginning
+
 ### 0.5.1 2009-04-14
 
 * Added License note
