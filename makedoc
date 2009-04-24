@@ -1,0 +1,52 @@
+#!/usr/bin/python
+
+import os
+import sys
+import shutil
+
+def myfunc ():
+  print "makedoc: Making documents for Meetup.Tweener"
+
+  n = os.system('which NaturalDocs')
+  if n != 0:
+    print "please install NaturalDocs first."
+    return
+
+  path = sys.argv[0];
+  arr = path.split('/')
+  SCRIPT_NAME = arr.pop()
+  SCRIPT_BASE = '/'.join(arr)
+  # print SCRIPT_BASE
+  # print SCRIPT_NAME
+
+  DOCUMENT_PATH = SCRIPT_BASE + '/../meetup.tweener.gh-pages'
+
+  if os.path.exists(DOCUMENT_PATH) == 0:
+    print 'this script requires the following path existing: ' + DOCUMENT_PATH
+    return
+
+  NATURALDOCS = SCRIPT_BASE + '/naturaldocs'
+
+  com = []
+  com.append('NaturalDocs -i ')
+  com.append(SCRIPT_BASE)
+  com.append('/src -p ')
+  com.append(NATURALDOCS)
+  com.append(' -o HTML ')
+  com.append(DOCUMENT_PATH)
+  com.append(' -s meetup')
+  os.system(''.join(com))
+  # print(''.join(com))
+
+  files = os.listdir(NATURALDOCS + '/images')
+  for file in files:
+    SRC = NATURALDOCS + '/images/' + file
+    DEST = DOCUMENT_PATH + '/styles/' + file
+    shutil.copy(SRC, DEST)
+    # print SRC
+    # print DEST
+
+  print 'Done!'
+
+if __name__ == '__main__':
+  myfunc()
