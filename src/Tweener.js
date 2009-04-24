@@ -29,7 +29,7 @@ Require:
 See Also:
   - http://en.wikipedia.org/wiki/Tweening
   - http://hosted.zeh.com.br/tweener/docs/en-us/
-  - http://github.com/hotchpotch/hotchpotch.github.com/raw/42bdc6fce9b656a74525e6565f778c93f149839f/javascripts/JSTweener.js
+  - http://hotchpotch.github.com/javascripts/JSTweener.js
 
 Note:
   Keeping this compatible to Zeh's original AS3 Tweener API is one of
