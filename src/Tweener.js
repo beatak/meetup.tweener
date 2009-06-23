@@ -67,7 +67,7 @@ Meetup.Tweener.isUsing                  = 'MochiKit';
 Meetup.Tweener.styleLib                 = null;
 Meetup.Tweener.tweens                   = {};
 Meetup.Tweener.FPS                      = 55;
-Meetup.Tweener.VERSION                  = '0.5.2';
+Meetup.Tweener.VERSION                  = '0.5.3';
 
 /*
 variable: DEFAULT_PARAMS
@@ -453,7 +453,7 @@ Meetup.Tweener.findTween = function (criteria) {
     else {
       twid = criteria.tweendId;
     }
-    console.log('tweenId: ' + twid);
+    //console.log('tweenId: ' + twid);
     if (twid) {
       result = this.tweens[twid];
     }
